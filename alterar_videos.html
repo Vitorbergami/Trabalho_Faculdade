@@ -11,15 +11,17 @@
 
     <title>Painel Administrativo</title>
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-       <!-- Page Wrapper -->
-       <div id="wrapper">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -46,20 +48,41 @@
                 <a class="nav-link" href="imagens_home.html">
                     <i class="fas fa-image fa-chart-area"></i>
                     <span>Alterar Imagens</span></a>
-            </li> 
+            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="contatos.html">
                     <i class="fas fa-pen fa-chart-area"></i>
                     <span>Alterar Contatos</span></a>
-            </li>   
+            </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="alterar_videos.html">
                     <i class="fas fa-video"></i>
                     <span>Alterar Videos</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+              <a class="nav-link" href="publicacoes.html">
+                  <i class="fa-solid fa-file-pdf"></i>
+                  <span>Artigos</span></a>
+          </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+              <a class="nav-link" href="alterar_pesquisa.html">
+                <i class="fa-light fa-file-chart-pie"></i>
+                <span>Alterar Pesquisa</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+              <a class="nav-link" href="alterar_inicio_projeto.html">
+                <i class="fa-solid fa-house-blank"></i>
+                <span>Alterar Início Projetos</span></a>
             </li>
 
             <!-- Divider -->
@@ -85,20 +108,19 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                <!-- Topbar Navbar -->
+                    <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-                    <!-- Nav Item - User Information -->
+                        <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span> -->
-                                <img class="img-profile rounded-circle"
-                                    src="img/sem_foto2.png">
+                                <img class="img-profile rounded-circle" src="img/sem_foto2.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Sair
                                 </a>
@@ -114,59 +136,62 @@
                 <div class="container-fluid">
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                      <h1 class="h3 mb-0 text-gray-800">Alterar Videos</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Alterar Videos</h1>
                     </div>
-                  
+
                     <div class="container-fluid">
                         <div class="row">
-                          <div class="col-lg-12">
-                            <div class="card shadow mb-4">
-                              <div class="card-body">
-                                <form action="{url}cadastro-cursos/salvar/{id}" method="post" enctype="multipart/form-data">
-                                  <div class="form-group">
-                                    <label for="imagem">Video</label>
-                                    <input type="file" name="imagem" class="form-control-file" id="imagem">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="titulo">Título</label>
-                                    <input type="text" name="titulo" class="form-control" id="titulo" value="" placeholder="Digite o título" required="required">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="descricao_curta">Descrição</label>
-                                    <textarea id="descricao_curta" name="descricao_curta" required="true" rows="3" class="form-control" placeholder="Descrição"></textarea>
-                                  </div>
-                                  <button type="submit" class="btn btn-primary">Salvar</button>
-                                </form>
-                              </div>
+                            <div class="col-lg-12">
+                                <div class="card shadow mb-4">
+                                    <div class="card-body">
+                                        <form action="{url}cadastro-cursos/salvar/{id}" method="post"
+                                            enctype="multipart/form-data">
+                                            <div class="form-group">
+                                                <label for="imagem">Video</label>
+                                                <input type="file" name="imagem" class="form-control-file" id="imagem">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="titulo">Título</label>
+                                                <input type="text" name="titulo" class="form-control" id="titulo"
+                                                    value="" placeholder="Digite o título" required="required">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="descricao_curta">Descrição</label>
+                                                <textarea id="descricao_curta" name="descricao_curta" required="true"
+                                                    rows="3" class="form-control" placeholder="Descrição"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Salvar</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
-            </div>
-        </div>
-        
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white ">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy;  2022</span>
+                    </div>
                 </div>
             </div>
-        </footer>
-    </div>
 
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white ">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; 2022</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
 
 
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/sb-admin-2.min.js"></script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="js/sb-admin-2.min.js"></script>
+        <script src="vendor/chart.js/Chart.min.js"></script>
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
