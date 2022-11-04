@@ -22,7 +22,6 @@
 </head>
 
 <body id="page-top">
-
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -53,7 +52,6 @@
           <span>Alterar Imagens</span></a>
       </li> -->
 
-      <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" href="inicio.html">
             <span class="fas material-symbols-rounded">home</span>
@@ -81,6 +79,7 @@
           <span>Alterar Contatos</span></a>
       </li>
 
+
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -90,16 +89,17 @@
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
       </div>
     </ul>
+    <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
+        <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
-
-          <!-- Topbar Navbar -->
+          <!-- Topbar -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -115,67 +115,92 @@
               </div>
             </li>
           </ul>
-
         </nav>
-        <div class="container-fluid">
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Alterar Pesquisa</h1>
-          </div>
 
+        <div class="container-fluid">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Vídeos</h1>
+            <a href="alterar_artigos.html" class="btn btn-primary">+ Novo Vídeo</a>
+          </div>
           <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card shadow mb-4">
+            <div class="row row-cols-4">
+              <div class="col">
+                <span class="card" style="width: 18rem; margin-bottom: 15px; margin-right: 15px;">
+                  <img src="img/sem_img.png" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <form action="{url}cadastro-cursos/salvar/{id}" method="post" enctype="multipart/form-data">
-                      <div class="form-group">
-                        <label for="imagem">Imagem</label>
-                        <input type="file" name="imagem" class="form-control-file" id="imagem">
-                      </div>
-                      <div class="form-group">
-                        <label for="imagem">Imagem BI</label>
-                        <input type="file" name="imagem" class="form-control-file" id="imagem">
-                      </div>
-                      <div class="form-group">
-                        <label for="imagem">Pesquisa PDF</label>
-                        <input type="file" name="pdf" class="form-control-file" id="pdf">
-                      </div>
-                      <div class="form-group">
-                        <label for="titulo">Título</label>
-                        <input type="text" name="titulo" class="form-control" id="titulo" value=""
-                          placeholder="Digite o título" required="required">
-                      </div>
-                      <div class="form-group">
-                        <label for="descricao_curta">Descrição</label>
-                        <textarea id="descricao_curta" name="descricao_curta" required="false" rows="3"
-                          class="form-control" placeholder="Descrição opcional"></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Salvar</button>
-                    </form>
+                    <h5 class="card-title">Títudo do Vídeo 00</h5>
+                    <p class="card-text">Legenda</p>
+                    <a href="alterar_videos.html" class="btn btn-primary">Editar</a>
+                    <button type="submit" class="btn btn-danger mb1 bg-red">Excluir</button>
                   </div>
-                </div>
+                </span>
               </div>
+              
+              <div class="col">
+                <span class="card" style="width: 18rem; margin-bottom: 15px; margin-right: 15px;">
+                  <img src="img/sem_img.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Títudo do Vídeo 00</h5>
+                    <p class="card-text">Legenda</p>
+                    <a href="alterar_videos.html" class="btn btn-primary">Editar</a>
+                    <button type="submit" class="btn btn-danger mb1 bg-red">Excluir</button>
+                  </div>
+                </span>
+              </div>
+
+              <div class="col">
+                <span class="card" style="width: 18rem; margin-bottom: 15px; margin-right: 15px;">
+                  <img src="img/sem_img.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Títudo do Vídeo 00</h5>
+                    <p class="card-text">Legenda</p>
+                    <a href="alterar_videos.html" class="btn btn-primary">Editar</a>
+                    <button type="submit" class="btn btn-danger mb1 bg-red">Excluir</button>
+                  </div>
+                </span>
+              </div>
+
+              <div class="col">
+                <span class="card" style="width: 18rem; margin-bottom: 15px; margin-right: 15px;">
+                  <img src="img/sem_img.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Títudo do Vídeo 00</h5>
+                    <p class="card-text">Legenda</p>
+                    <a href="alterar_videos.html" class="btn btn-primary">Editar</a>
+                    <button type="submit" class="btn btn-danger mb1 bg-red">Excluir</button>
+                  </div>
+                </span>
+              </div>
+
+              <div class="col">
+                <span class="card" style="width: 18rem; margin-bottom: 15px; margin-right: 15px;">
+                  <img src="img/sem_img.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Títudo do Vídeo 00</h5>
+                    <p class="card-text">Legenda</p>
+                    <a href="alterar_videos.html" class="btn btn-primary">Editar</a>
+                    <button type="submit" class="btn btn-danger mb1 bg-red">Excluir</button>
+                  </div>
+                </span>
+              </div>
+              
             </div>
+          </div>
+          <div class="row">
           </div>
         </div>
 
       </div>
       <!-- Footer -->
-      <footer class="sticky-footer bg-white ">
+      <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; 2022</span>
           </div>
         </div>
       </footer>
-
+      <!-- End of Footer -->
     </div>
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
 
 
     <script src="vendor/jquery/jquery.min.js"></script>
