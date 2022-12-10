@@ -5,8 +5,8 @@ form.addEventListener('submit', event => {
     
     const formData = new FormData(form)
 
-   const url = "https://backend-trab-faculdade.vercel.app/login";
-   //const url = "http://localhost:3000/login";
+   //const url = "https://backend-trab-faculdade.vercel.app/login";
+   const url = "http://localhost:3000/login";
 
     const data = Object.fromEntries(formData)
 
@@ -17,21 +17,24 @@ form.addEventListener('submit', event => {
             "Access-Control-Allow-Origin" : "*"
          },
         body : JSON.stringify(data),
-        //mode : "cors"
     };
 
     fetch(url, other_params)
             .then((response) => {
                 if (response.ok) {
-                    console.log('Foi: ', response)
                     return response.json();
                 } else {
-                    console.log('Erro: ', response)
                     throw new Error("Could not reach the API: " + response.statusText);
                 }
             }).then((data) => {
-                console.log('Teste: ', data)
+                if(data.token) {
+                    sessionStorage.setItem("token", data.token);
+                    window.location.replace('index.html');
+                } else {
+                    alert("Usuário ou senha inválidos")
+                    console.log('entreou aqui')
+                } 
             }).catch((error) => {
-                console.log('Erro: ', error)
+                document.getElementById('loginInvalido').style.display = 'block'
             });
 })
