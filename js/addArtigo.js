@@ -59,7 +59,7 @@ form.addEventListener('submit', event => {
         <p>Provavelmente o artigo em questão já foi cadastrado anteriormente. Caso não tenha sido contate o Administrador</p>
         </div>
         <div class="modal-footer">
-            <button type="button" id="confirm-button" class="btn btn-secondary"
+            <button type="button" id="confirm-button" class="btn btn-primary"
                 data-dismiss="modal">Ok</button>
         </div>`;
 
