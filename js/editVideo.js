@@ -1,4 +1,4 @@
-const form = document.getElementById('artigo')
+const form = document.getElementById('video')
 const token = sessionStorage.getItem("token");
 
 let params = new URLSearchParams(window.location.search);
@@ -6,7 +6,7 @@ const id = params.get("id");
 
 
 $(function () {
-    fetch(`http://localhost:3000/getAnexo/${id}`, {
+    fetch(`http://localhost:3000/getVideo/${id}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -20,10 +20,10 @@ $(function () {
                 throw new Error("Could not reach the API: " + response.statusText);
             }
         }).then((data) => {
-            if (data.anexo) {
-                document.getElementById("anexo").value = data.anexo.anexo;
-                document.getElementById("titulo").value = data.anexo.titulo;
-                document.getElementById("descricao").value = data.anexo.descricao;
+            if (data.video) {
+                document.getElementById("link").value = data.video.link;
+                document.getElementById("titulo").value = data.video.titulo;
+                document.getElementById("descricao").value = data.video.descricao;
             }
         }).catch((error) => {
         });
@@ -35,7 +35,7 @@ form.addEventListener('submit', event => {
     const formData = new FormData(form)
 
     //const url = "https://backend-trab-faculdade.vercel.app/login";
-    const url = `http://localhost:3000/editAnexo/${id}`;
+    const url = `http://localhost:3000/editVideo/${id}`;
 
     const data = Object.fromEntries(formData)
 
@@ -58,13 +58,13 @@ form.addEventListener('submit', event => {
             }
         }).then(() => {
             document.getElementById("modal-content").innerHTML += `<div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Artigo editado com sucesso</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Vídeo editado com sucesso</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <div class="modal-body">
-        <p>Voltando para visualização dos artigos.</p>
+        <p>Voltando para visualização dos videos.</p>
         </div>
         <div class="modal-footer">
             <button type="button" id="confirm-button" class="btn btn-primary"
@@ -74,7 +74,7 @@ form.addEventListener('submit', event => {
             $('#myModal').modal('show')
 
             $('#confirm-button').on('click', function () {
-                window.location.replace('artigos.html');
+                window.location.replace('videos.html');
             });
         }).catch((error) => {
             document.getElementById("modal-content").innerHTML += `<div class="modal-header">
@@ -84,7 +84,7 @@ form.addEventListener('submit', event => {
             </button>
         </div>
         <div class="modal-body">
-        <p>Provavelmente o artigo em questão já foi cadastrado anteriormente. Caso não tenha sido contate o Administrador</p>
+        <p>Provavelmente o vídeo em questão já foi cadastrado anteriormente. Caso não tenha sido contate o Administrador</p>
         </div>
         <div class="modal-footer">
             <button type="button" id="confirm-button" class="btn btn-primary"
@@ -94,7 +94,7 @@ form.addEventListener('submit', event => {
             $('#myModal').modal('show')
 
             $('#confirm-button').on('click', function () {
-                window.location.replace('artigos.html');
+                window.location.replace('videos.html');
             });
         });
 })
