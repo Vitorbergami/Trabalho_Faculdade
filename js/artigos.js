@@ -40,7 +40,6 @@ fetch('http://localhost:3000/getAnexos', {
     });
 
 function confirmDelArtigo(id) {
-    const modal = document.getElementById("modal-content").innerHTML;
     document.getElementById("modal-content").innerHTML += `<div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Atenção</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
