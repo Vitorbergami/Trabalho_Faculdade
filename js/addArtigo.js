@@ -39,7 +39,7 @@ form.addEventListener('submit', event => {
         <p>Voltando para visualização dos artigos.</p>
         </div>
         <div class="modal-footer">
-            <button type="button" id="confirm-button" class="btn btn-secondary"
+            <button type="button" id="confirm-button" class="btn btn-primary"
                 data-dismiss="modal">Ok</button>
         </div>`;
 
