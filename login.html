@@ -28,14 +28,17 @@
                     <div class="col-lg-12">
                       <div class="p-5">
                         <div class="text-center">
+                          <div class="alert alert-danger" style="display: none;" id="loginInvalido" role="alert">
+                            Usuário ou senha inválidos
+                          </div>
                           <h1 class="h4 text-gray-900 mb-4">Bem vindo ao Painel Administrativo!</h1>
                         </div>
-                        <form class="user" action="{url}login/acessar" method="post">
+                        <form class="user">
                           <div class="form-group">
-                            <input type="text" name="login" class="form-control form-control-user" placeholder="Digite seu login">
+                            <input type="email" name="email" class="form-control form-control-user" required placeholder="Digite seu login">
                           </div>
                           <div class="form-group">
-                            <input type="password" name="senha" class="form-control form-control-user" placeholder="Digite sua senha">
+                            <input type="password" name="password" class="form-control form-control-user" required placeholder="Digite sua senha">
                           </div>
                           <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
                         </form>
@@ -57,6 +60,8 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>
+    <script src="js/login.js"></script>
+
 
 </body>
 
