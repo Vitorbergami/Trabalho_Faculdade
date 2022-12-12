@@ -2,7 +2,7 @@ const form = document.getElementById('artigo')
 const token = sessionStorage.getItem("token");
 
 
-fetch('http://localhost:3000/getAnexos', {
+fetch('https://backend-trabalho-faculdade.herokuapp.com/getAnexos', {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function confirmDelArtigo(id) {
 }
 function delArtigo(id) {
 
-    const url = `http://localhost:3000/deleteAnexo/${id}`;
+    const url = `https://backend-trabalho-faculdade.herokuapp.com/deleteAnexo/${id}`;
 
     const other_params = {
         method: "DELETE",

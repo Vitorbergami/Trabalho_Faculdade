@@ -2,7 +2,7 @@ const form = document.getElementById('artigo')
 const token = sessionStorage.getItem("token");
 
 
-fetch('http://localhost:3000/getVideos', {
+fetch('https://backend-trabalho-faculdade.herokuapp.com/getVideos', {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function confirmDelVideo(id) {
 }
 function delVideo(id) {
 
-    const url = `http://localhost:3000/deleteVideo/${id}`;
+    const url = `https://backend-trabalho-faculdade.herokuapp.com/deleteVideo/${id}`;
 
     const other_params = {
         method: "DELETE",

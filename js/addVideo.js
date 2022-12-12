@@ -6,8 +6,8 @@ form.addEventListener('submit', event => {
 
     const formData = new FormData(form)
 
-    //const url = "https://backend-trab-faculdade.vercel.app/login";
-    const url = "http://localhost:3000/addVideo";
+    const url = "https://backend-trabalho-faculdade.herokuapp.com/addVideo";
+    //const url = "http://localhost:3000/addVideo";
 
     const data = Object.fromEntries(formData)
 

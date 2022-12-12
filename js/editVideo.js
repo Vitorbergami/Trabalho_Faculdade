@@ -6,7 +6,7 @@ const id = params.get("id");
 
 
 $(function () {
-    fetch(`http://localhost:3000/getVideo/${id}`, {
+    fetch(`https://backend-trabalho-faculdade.herokuapp.com/getVideo/${id}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -34,8 +34,8 @@ form.addEventListener('submit', event => {
 
     const formData = new FormData(form)
 
-    //const url = "https://backend-trab-faculdade.vercel.app/login";
-    const url = `http://localhost:3000/editVideo/${id}`;
+    const url = "https://backend-trabalho-faculdade.herokuapp.com/editVideo/${id}";
+    //const url = `http://localhost:3000/editVideo/${id}`;
 
     const data = Object.fromEntries(formData)
 

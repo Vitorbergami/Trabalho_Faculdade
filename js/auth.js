@@ -1,12 +1,12 @@
-const token = sessionStorage.getItem("token");
+const tokenAcesso = sessionStorage.getItem("token");
 
 $(function () {
-    fetch(`http://localhost:3000/auth`, {
+    fetch(`https://backend-trabalho-faculdade.herokuapp.com/auth`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
-            "authorization": token
+            "authorization": tokenAcesso
         }
     })
         .then((response) => {
