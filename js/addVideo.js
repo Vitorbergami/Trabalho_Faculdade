@@ -9,7 +9,8 @@ form.addEventListener('submit', event => {
     const url = "https://backend-trabalho-faculdade.herokuapp.com/addVideo";
     //const url = "http://localhost:3000/addVideo";
 
-    const data = Object.fromEntries(formData)
+    let data = Object.fromEntries(formData)
+    data.link = _alteraLink(data.link);
 
     const other_params = {
         method: "POST",
@@ -70,3 +71,8 @@ form.addEventListener('submit', event => {
             });
         });
 })
+
+function _alteraLink(link) {
+    let linkFormatado = link.substring(32, 43)
+    return linkFormatado
+}

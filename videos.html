@@ -110,7 +110,7 @@
                 <img class="img-profile rounded-circle" src="img/sem_foto2.png">
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="login.html">
+                <a class="dropdown-item" style="cursor: pointer;" id="logout">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Sair
                 </a>
@@ -127,12 +127,12 @@
           <div class="container-fluid">
             <div class="row row-cols-4" id="videosGroup">
             </div>
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-              aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content" id="modal-content">
-                </div>
-              </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="myModal" aria-hidden="true">
+          <div class="modal-dialog-centered" style="width: 500px; margin-left: 40%;" role="document">
+            <div class="modal-content" id="modal-auth-content">
             </div>
           </div>
         </div>
@@ -163,6 +163,8 @@
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
   <script src="js/videos.js"></script>
+  <script src="js/auth.js"></script>
+
 </body>
 
 </html>

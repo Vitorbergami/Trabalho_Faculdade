@@ -38,7 +38,7 @@ form.addEventListener('submit', event => {
     //const url = `http://localhost:3000/editVideo/${id}`;
 
     const data = Object.fromEntries(formData)
-
+    data.link = _alteraLink(data.link);
     const other_params = {
         method: "PUT",
         headers: {
@@ -98,3 +98,8 @@ form.addEventListener('submit', event => {
             });
         });
 })
+
+function _alteraLink(link) {
+    let linkFormatado = link.substring(32, 43)
+    return linkFormatado
+}

@@ -1,4 +1,5 @@
 const tokenAcesso = sessionStorage.getItem("token");
+const logout = document.getElementById('logout')
 
 $(function () {
     fetch(`https://backend-trabalho-faculdade.herokuapp.com/auth`, {
@@ -35,3 +36,8 @@ $(function () {
             });
         });
 });
+
+logout.addEventListener('click', () => {
+    sessionStorage.setItem("token", null);
+    window.location.replace('login.html');
+})
