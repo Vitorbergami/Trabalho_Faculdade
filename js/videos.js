@@ -56,10 +56,10 @@ function confirmDelVideo(id) {
                     data-dismiss="modal">Cancelar</button>
             </div>`;
 
-    $('#myModal').modal('show')
+    $('#myModalVideo').modal('show')
 
     $('#cancel-button').on('click', function () {
-        $('#myModal').modal('hide');
+        $('#mmyModalVideo').modal('hide');
         document.getElementById("modal-content").replaceChildren();
     });
 

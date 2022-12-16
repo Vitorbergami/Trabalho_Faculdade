@@ -56,10 +56,10 @@ function confirmDelArtigo(id) {
                     data-dismiss="modal">Cancelar</button>
             </div>`;
 
-    $('#myModal').modal('show')
+    $('#myModalArtigo').modal('show')
 
     $('#cancel-button').on('click', function () {
-        $('#myModal').modal('hide');
+        $('#myModalArtigo').modal('hide');
         document.getElementById("modal-content").replaceChildren();
     });
 

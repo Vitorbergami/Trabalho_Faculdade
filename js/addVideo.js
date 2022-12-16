@@ -44,7 +44,7 @@ form.addEventListener('submit', event => {
                 data-dismiss="modal">Ok</button>
         </div>`;
 
-            $('#myModal').modal('show')
+            $('#myModalVideo').modal('show')
 
             $('#confirm-button').on('click', function () {
                 window.location.replace('videos.html');
@@ -64,7 +64,7 @@ form.addEventListener('submit', event => {
                 data-dismiss="modal">Ok</button>
         </div>`;
 
-            $('#myModal').modal('show')
+            $('#myModalVideo').modal('show')
 
             $('#confirm-button').on('click', function () {
                 window.location.replace('videos.html');

@@ -43,7 +43,7 @@ form.addEventListener('submit', event => {
                 data-dismiss="modal">Ok</button>
         </div>`;
 
-            $('#myModal').modal('show')
+            $('#myModalArtigo').modal('show')
 
             $('#confirm-button').on('click', function () {
                 window.location.replace('artigos.html');
